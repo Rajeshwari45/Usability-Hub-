@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My website</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media-queries.css">
 </head>
 
 <body>
@@ -26,6 +27,7 @@
 
     </div>
 
+    <!-- nav-section  -->
 
     <nav>
 
@@ -37,7 +39,7 @@
 
 
             </a>
-            <div class="nav-links">
+            <div class="nav-links" id="nav-links">
 
                 <ul class="flex">
                     <li><a href="#" class="hover-link">products</a></li>
@@ -49,6 +51,9 @@
                 </ul>
 
             </div>
+            <a href="#" class="nav-toggle hover-link" id="nav-toggle">
+                <i class="fa-sharp fa-solid fa-bars"></i>
+            </a>
         </div>
     </nav>
 
@@ -165,6 +170,7 @@
         </div>
     </section>
 
+    <!-- big-feature section -->
 
     <section class="big-feature-section">
 
@@ -191,7 +197,7 @@
 
     <section class="big-feature-section">
 
-        <div class="container flex big-feature-container">
+        <div class="container flex big-feature-container" id="second-big-feature">
 
 
             <div class="feature-desc flex">
@@ -270,7 +276,7 @@
     </div>
 
 
-
+    <!-- cta-section  -->
 
     <section class="cta-section">
         <div class="container flex cta-section-container">
@@ -280,6 +286,8 @@
 
         </div>
     </section>
+
+    <!-- footer-section -->
 
     <footer>
         <div class="container flex footer-container">
@@ -331,6 +339,8 @@
         </div>
     </footer>
 
+    <!-- subfooter-section  -->
+
     <div class="subfooter">
         <div class="Container flex subfooter-container">
             <a class="hover-link" href="#">Privacy Policy</a>
@@ -344,6 +354,16 @@
 
 
     <script src="https://kit.fontawesome.com/a423dde42d.js" crossorigin="anonymous"></script>
+
+    <script>
+        const toggleButton = document.getElementById('nav-toggle');
+        const navLinks = document.getElementById('nav-links');
+
+        toggleButton.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+
+        })
+    </script>
 </body>
 
 </html>
