@@ -46,8 +46,8 @@
                     <li><a href="#" class="hover-link">customer</a></li>
                     <li><a href="#" class="hover-link">pricing</a></li>
                     <li><a href="#" class="hover-link">Resources</a></li>
-                    <li><a href="#" class="hover-link secondary-button">Sign in</a></li>
-                    <li><a href="#" class="hover-link primary-button">Sign up</a></li>
+                    <li><a href="#" class="hover-link secondary-button" onclick="loginForm()">Login</a></li>
+                    <li><a href="#" class="hover-link primary-button" onclick="registerForm()">Register</a></li>
                 </ul>
 
             </div>
@@ -76,6 +76,95 @@
 
         </div>
     </header>
+
+
+    <!-- Login section -->
+
+    <div class="wrapper">
+
+
+        <dialog id="login" class="modalForm">
+            <span class="icon-close" onclick="onLoginClose()">
+                <ion-icon name="close"></ion-icon>
+            </span>
+            <div class="form-box Login">
+
+                <h2>Login</h2>
+                <form action="#">
+                    <div class="input-box">
+                        <span class="icon">
+                            <ion-icon name="mail"></ion-icon>
+                        </span>
+                        <input type="email" required>
+                        <label>Email</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon">
+                            <ion-icon name="lock-closed"></ion-icon>
+                        </span>
+                        <input type="password" required>
+                        <label>Password</label>
+                    </div>
+
+                    <div class="remember-forget">
+                        <label><input type="checkbox">Remember me</label>
+                        <a href="#">Forgot Password?</a>
+                    </div>
+
+                    <button type="submit" class="btn">Login</button>
+
+                    <div class="login-register">
+                        <p>Don't have an account?
+                            <a href="#" class="register-link" onclick="openRegistraonFromLogin()">
+                                Register
+                            </a></p>
+                    </div>
+                </form>
+
+            </div>
+
+        </dialog>
+        <dialog id="register" class="modalForm">
+            <span class="icon-close" onclick="onRegisterClose()">
+                <ion-icon name="close"></ion-icon>
+            </span>
+            <div class="form-box register">
+
+                <h2>Registration</h2>
+                <form action="#">
+                    <div class="input-box">
+                        <span class="icon">
+                            <ion-icon name="person"></ion-icon>
+                        </span>
+                        <input type="text" required>
+                        <label>Username</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon">
+                            <ion-icon name="lock-closed"></ion-icon>
+                        </span>
+                        <input type="password" required>
+                        <label>Password</label>
+                    </div>
+
+                    <div class="remember-forget">
+                        <label><input type="checkbox">I agree to the terms and conditions.</label>
+                        <a href="#">Forgot Password?</a>
+                    </div>
+
+                    <button type="submit" class="btn">Register</button>
+
+                    <div class="login-register">
+                        <p>Already have an account?
+                            <a href="#" class="login-link" onclick=openLoginFromRegistraon()>
+                                Login
+                            </a></p>
+                    </div>
+                </form>
+
+            </div>
+        </dialog>
+    </div>
 
     <!-- companies section -->
 
@@ -352,6 +441,8 @@
         </div>
     </div>
 
+    <script src="script.js"></script>
+
 
     <script src="https://kit.fontawesome.com/a423dde42d.js" crossorigin="anonymous"></script>
 
@@ -364,6 +455,9 @@
 
         })
     </script>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>
