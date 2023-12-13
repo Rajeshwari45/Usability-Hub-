@@ -49,20 +49,5 @@ function openLoginFromRegistraon() {
   onRegisterClose();
   loginForm();
 }
-// function saveData() {
-//   let user_records=new Array();
-//   user_records=JSON.parse(localStorage.getItem("users"))?JSON.parse(localStorage.getItem("users")):[]
-//   if(user_records.some((v)=>{
-//     return v.Username==Username
-//   })) {
-//     alert("Duplicate Data");
-//   }
-//   else {
-//     user_records.push({
-//       "Username": Username,
-//       "Password": Password
-//     })
-//     localStorage.setItem("users",JSON.stringfly(user_records));
-//   }
-// }
+
 
