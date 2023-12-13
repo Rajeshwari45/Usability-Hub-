@@ -8,9 +8,6 @@
     <title>My website</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="media-queries.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 
 <body>
@@ -461,23 +458,6 @@
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-
-function saveData() {
-  let user_records=new Array();
-  user_records=JSON.parse(localStorage.getItem("users"))?JSON.parse(localStorage.getItem("users")):[]
-  if(user_records.some((v)=>{
-    return v.Username==Username
-  })) {
-    alert("Duplicate Data");
-  }
-  else {
-    user_records.push({
-      "Username": Username,
-      "Password": Password
-    })
-    localStorage.setItem("users",JSON.stringfly(user_records));
-  }
-}
 </body>
     
 
